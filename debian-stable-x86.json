@@ -1,0 +1,36 @@
+{
+  "brand": "kvm",
+  "vcpus": 1,
+  "autoboot": false,
+  "ram": 256,
+  "disks": [
+    {
+      "boot": true,
+      "model": "virtio",
+      "size": 5120
+    }
+  ],
+  "resolvers": [
+    "8.8.8.8",
+    "8.8.4.4"
+  ],
+  "nics": [
+    {
+      "nic_tag": "external",
+      "model": "virtio",
+      "ip": "10.88.88.51",
+      "netmask": "255.255.255.0",
+      "gateway": "10.88.88.2",
+      "vlan_id": 0
+    },
+    {
+      "nic_tag": "internal",
+      "model": "virtio",
+      "ip": "10.99.99.150",
+      "netmask": "255.255.255.0",
+      "gateway": "10.99.99.7",
+      vlan_id": 0
+    }
+  ],
+  "default_gateway": "10.88.88.2"
+}
